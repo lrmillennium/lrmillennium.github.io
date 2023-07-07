@@ -6,6 +6,7 @@
     /* Add your CSS styles here */
     body {
       font-family: Arial, sans-serif;
+      font-size: 14px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -73,7 +74,7 @@
       margin-bottom: 5px;
     }
 
-        .work-experience-details {
+    .work-experience-details {
       display: none;
       margin-top: 10px;
       padding-left: 20px;
@@ -88,15 +89,36 @@
     }
 
     .work-experience-toggle::before {
-      content: "+";
+      content: "-";
       display: inline-block;
       margin-right: 5px;
     }
 
     .work-experience-toggle.collapsed::before {
-      content: "-";
+      content: "+";
     }
   </style>
+    <script>
+
+    function toggleDetails(element) {
+      var details = element.nextElementSibling;
+      element.classList.toggle('collapsed');
+      details.classList.toggle('show');
+    }
+
+    // Function to expand all work experience details by default
+    function expandAllDetails() {
+        var toggleElements = document.querySelectorAll('.work-experience-toggle');
+        toggleElements.forEach(function(element) {
+            var details = element.nextElementSibling;
+            element.classList.remove('collapsed');
+            details.classList.add('show');
+        });
+    }
+
+    // Call the function to expand all details on page load
+    window.addEventListener("load", expandAllDetails);
+  </script>
 </head>
 <body>
 <div class="header">
@@ -129,54 +151,64 @@
         <ul class="work-experience">
             <li>
                 <h3>Disney Streaming - Content Distribution : Oct 2022 - Present</h3>
-                <h4>Development Manager</h4>
-                <p>Lead a team to implement the unified Hulu and Disney catalog platform for external consumers such as Amazon and AppleTV and internal clients.  The new system is a single app designed for multi regions and markets, and handles 10 times of the existing data volume.  It is built using Java, Python, and AWS service(s) such as EKS, Kinesis stream, Elastic Search, and EMR/Spark.
-                </p>
-                <p>Develop a personalized content API, OAuth 2.0 authentication, and SLO specification for Disney’s external partners to consume disney+ catalog data in scale and speed. </p>
-                <p>Create a quarterly OKR process to help team to set and track priorities and goals and score the key result(s), increasing the team’s focus and ownership and providing transparency to product managers and project managers
-                </p>
-                <p>Automate the DevOps process by integrating datadog infrastructure and log monitoring, pagerduty, slack, and confluence support knowledgebase </p>
+                <h4 class="work-experience-toggle" onclick="toggleDetails(this)">Development Manager</h4>
+                <ul class="work-experience-details">
+                    <li>Lead a team to implement the unified Hulu and Disney catalog platform for external consumers such as Amazon and AppleTV and internal clients.  The new system is a single app designed for multi regions and markets, and handles 10 times of the existing data volume.  It is built using Java, Python, and AWS service(s) such as EKS, Kinesis stream, Elastic Search, and EMR/Spark.
+                    </li>
+                    <li>Develop a personalized content API, OAuth 2.0 authentication, and SLO specification for Disney’s external partners to consume disney+ catalog data in scale and speed. </li>
+                    <li>Create a quarterly OKR process to help team to set and track priorities and goals and score the key result(s), increasing the team’s focus and ownership and providing transparency to product managers and project managers
+                    </li>
+                    <li>Automate the DevOps process by integrating datadog infrastructure and log monitoring, pagerduty, slack, and confluence support knowledgebase </li>
+                </ul>
             </li>
             <li>
                 <h3>JPMorgan Asset & Wealth Management - Portfolio Insight : April 2020 - Oct 2022</h3>
-                <h4>Executive Director, Senior Software Engineer Manager
+                <h4 class="work-experience-toggle" onclick="toggleDetails(this)">Executive Director, Senior Software Engineer Manager
                 </h4>
-                <p>Lead a global team of 20+ developers to re-architect and implement the fund of funds and single name equity stock portfolio insight application using Java, Python, and AWS service(s) such as EMR, EKS, dynamoDB, redis, kafka, step function, and event bridge, increasing the system to support unlimited scale while having a 40% cost reduction compared with the on premise infrastructure’s cost</p>
-                <p>Lead the cross teams development effort in integrating the model portfolios to portfolio insight for portfolio analysis, helping increase the JPM fund sales by 20% and improving the client service team efficiency with potential 4 head counts saving
-                </p>
-                <p>Create weekly toastmaster and regular hackathon and training sessions, improving team’s communication and innovation skills, and business and domain knowledge, and the annual employee satisfaction survey score from <50% to 90%
-                </p>
-                <p>Partner with product managers and business stakeholders to define the roadmap, OKR and review process, improving the transparency and helping all stakeholders to set and track the goals.
-                </p>
+                <ul class="work-experience-details">
+                    <li>Lead a global team of 20+ developers to re-architect and implement the fund of funds and single name equity stock portfolio insight application using Java, Python, and AWS service(s) such as EMR, EKS, dynamoDB, redis, kafka, step function, and event bridge, increasing the system to support unlimited scale while having a 40% cost reduction compared with the on premise infrastructure’s cost</li>
+                    <li>Lead the cross teams development effort in integrating the model portfolios to portfolio insight for portfolio analysis, helping increase the JPM fund sales by 20% and improving the client service team efficiency with potential 4 head counts saving
+                    </li>
+                    <li>Create weekly toastmaster and regular hackathon and training sessions, improving team’s communication and innovation skills, and business and domain knowledge, and the annual employee satisfaction survey score from <50% to 90%
+                    </li>
+                    <li>Partner with product managers and business stakeholders to define the roadmap, OKR and review process, improving the transparency and helping all stakeholders to set and track the goals.
+                    </li>
+                </ul>
             </li>
             <li>
                 <H3>JPMorgan Asset & Wealth Management  - Portfolio Management and ETF System  : Dec 2014 - April 2020</h3>
-                <h4>Executive Director, Senior Software Engineer Manager</h4>
-                <p>Manage a multi year program to develop the ETF and fund of funds portfolio management application to view and rebalance the portfolio, order generation and management for equity and fixed income order flow
-                </p>
-                <p>Pioneer in adopting JPMorgan private cloud strategy.  Develop and manage all applications on the Pivotal private cloud platform with Java Spring Boot / React technology stack, and pilot new tools on AWS public cloud platform</p>
-                <p>Implement and adopt the test driven development and test automation in different levels for improved software quality : junit testing, jbehave acceptance and jmeter performance test, and cypress Web UI automation test
-                </p>
+                <h4 class="work-experience-toggle" onclick="toggleDetails(this)">Executive Director, Senior Software Engineer Manager</h4>
+                <ul class="work-experience-details">
+                    <li>Manage a multi year program to develop the ETF and fund of funds portfolio management application to view and rebalance the portfolio, order generation and management for equity and fixed income order flow
+                    </li>
+                    <li>Pioneer in adopting JPMorgan private cloud strategy.  Develop and manage all applications on the Pivotal private cloud platform with Java Spring Boot / React technology stack, and pilot new tools on AWS public cloud platform</li>
+                    <li>Implement and adopt the test driven development and test automation in different levels for improved software quality : junit testing, jbehave acceptance and jmeter performance test, and cypress Web UI automation test
+                    </li>
+                </ul>
             </li>
             <li>
                 <H3>Merrill Lynch - Portfolio Trading  : Mar 2012 - Dec 2014</h3>
-                <h4>Vice President, Development Lead</h4>
-                <p>Design and implement next generation of equity portfolio trading system and equity FIX gateway for merrill lynch portfolio trading desk using model driven development, Java, Java spring and protobuf
-                </p>
-                <p>Design and implement a configuration server to support regional and env specific configuration</p>
-                <p>Streamline the development build process and deployment to support rapid development
-                </p>
+                <h4 class="work-experience-toggle" onclick="toggleDetails(this)">Vice President, Development Lead</h4>
+                <ul class="work-experience-details">
+                    <li>Design and implement next generation of equity portfolio trading system and equity FIX gateway for merrill lynch portfolio trading desk using model driven development, Java, Java spring and protobuf
+                    </li>
+                    <li>Design and implement a configuration server to support regional and env specific configuration</li>
+                    <li>Streamline the development build process and deployment to support rapid development
+                    </li>
+                </ul>
             </li>
             <li>
                 <H3>UBS HK - Wealth Management  : Sep 2010 – Mar 2012</h3>
-                <h4>Director, Development manager of Wealth Management Technology APAC</h4>
-                <p>Lead the UBS tech lead team in HK and 100+ contractors in China to deliver the private wealth management application suite including CRM, order management system, and client reporting.
-                </p>
-                <p>Define KPI, vendor engagement model, standardize and streamline the SDLC process, improving the collaboration and transparency between UBS and the outsourcing vendor. </p>
-                <p>Lead the transition of development process from waterfall to UBS global SDLC, a RUP variance, increasing release quality and reducing the late finding issues by 50%.
-                </p>
-                <p>Create a structured recruiting and resource management process, and development training for the vendor's staff for the continuity of development during high attrition
-                </p>
+                <h4 class="work-experience-toggle" onclick="toggleDetails(this)">Director, Development manager of Wealth Management Technology APAC</h4>
+                <ul class="work-experience-details">
+                    <li>Lead the UBS tech lead team in HK and 100+ contractors in China to deliver the private wealth management application suite including CRM, order management system, and client reporting.
+                    </li>
+                    <li>Define KPI, vendor engagement model, standardize and streamline the SDLC process, improving the collaboration and transparency between UBS and the outsourcing vendor. </li>
+                    <li>Lead the transition of development process from waterfall to UBS global SDLC, a RUP variance, increasing release quality and reducing the late finding issues by 50%.
+                    </li>
+                    <li>Create a structured recruiting and resource management process, and development training for the vendor's staff for the continuity of development during high attrition
+                    </li>
+                </ul>
             </li>
         </ul>
     </section>
