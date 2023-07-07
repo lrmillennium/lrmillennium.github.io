@@ -63,6 +63,39 @@
     .section li:last-child {
       margin-bottom: 0;
     }
+
+    .work-experience {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .work-experience h3 {
+      margin-bottom: 5px;
+    }
+
+        .work-experience-details {
+      display: none;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .work-experience-details.show {
+      display: block;
+    }
+
+    .work-experience-toggle {
+      cursor: pointer;
+    }
+
+    .work-experience-toggle::before {
+      content: "+";
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .work-experience-toggle.collapsed::before {
+      content: "-";
+    }
   </style>
 </head>
 <body>
@@ -88,11 +121,12 @@
         <p> Extensive hands on experience in architecting and developing equity and option order management and trade booking system, ETF and mutual fund portfolio management system, and video catalog streaming system on AWS and on premise</p>
         <p> Experienced in people management and building strong and positive global team</p>
         <p> Agile development and devops practitioner and advocate</p>
+        <p> AIML programmer and Prompt engineer</p>
     </section>
 
     <section id="work-experience" class="section" style="background-color: #f3f3f3;">
         <h2>Work Experience</h2>
-        <ul>
+        <ul class="work-experience">
             <li>
                 <h3>Disney Streaming - Content Distribution : Oct 2022 - Present</h3>
                 <h4>Development Manager</h4>
