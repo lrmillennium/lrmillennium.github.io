@@ -1,65 +1,196 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Eric Rong</title>
+    <title>Eric Rong Bio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+    .left-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20%;
+      padding: 20px;
+      background-color: #f1f1f1;
+      height: 100vh;
+      overflow: auto;
+    }
 
-        p {
-            margin-bottom: 15px;
-        }
+    .right-section {
+      margin-left: 25%;
+      width: 75%;
+    }
 
-        h2 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
+    .section {
+      margin-bottom: 50px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #f9f9f9;
+    }
 
-        h3 {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-    </style>
+    .section h2 {
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    .section ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .section li {
+      margin-bottom: 10px;
+    }
+
+    .section li:last-child {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 <body>
-<img src="minime1.jpg" alt="Eric Rong">
+<div class="header">
+    <h1>Eric Rong</h1>
+    <img src="minime.jpeg" alt="Profile Picture" width="200" height="200">
+</div>
 
-<h1>About Me</h1>
-<p>
-    I am a technologist and an AIML enthusiast. My passion is to learn and adopt new technology to build high quality, well-designed, and cost-effective solution and product.  I have years of experience building software in the finance industry, and recently in video streaming industry.  Here is my <a href="https://tinyurl.com/ericrong"> linked in profile</a>.
-</p>
+<div class="left-section">
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#work-experience">Work Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+    </ul>
+</div>
 
-<h2>Hackathon Projects</h2>
-<h3>AIML</h3>
-<p>Build a <a href="https://devpost.com/software/u-s-market-pro-chat-bot?ref_content=my-projects-tab&ref_feature=my_projects">AI chatbot</a> to answer market and economy outlook questions like a pro using LangChain, OpenAI Embedding, VectorDB, and LLM Model (Open AI / Dolly)</p>
-<h2>Hobbies</h2>
-<h3>Sports</h3>
-<p>
-    American Football is my number one sport to watch.  I run 5K(s), hike, and play soccer.
-</p>
+<div class="right-section">
+    <section id="introduction" class="section">
+        <h2>Introduction</h2>
+        <p> Senior Software Manager with business knowledge and experience in asset management, private wealth management, FIX trading, and video streaming industry</p>
+        <p> Extensive hands on experience in architecting and developing equity and option order management and trade booking system, ETF and mutual fund portfolio management system, and video catalog streaming system on AWS and on premise</p>
+        <p> Experienced in people management and building strong and positive global team</p>
+        <p> Agile development and devops practitioner and advocate</p>
+    </section>
 
-<h3>Travel</h3>
-<p>
-    Exploring new places and experiencing different cultures is another passion of mine.  I love to visit the national parks in U.S. and Canada.
-</p>
+    <section id="work-experience" class="section" style="background-color: #f3f3f3;">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>
+                <h3>Disney Streaming - Content Distribution : Oct 2022 - Present</h3>
+                <h4>Development Manager</h4>
+                <p>Lead a team to implement the unified Hulu and Disney catalog platform for external consumers such as Amazon and AppleTV and internal clients.  The new system is a single app designed for multi regions and markets, and handles 10 times of the existing data volume.  It is built using Java, Python, and AWS service(s) such as EKS, Kinesis stream, Elastic Search, and EMR/Spark.
+                </p>
+                <p>Develop a personalized content API, OAuth 2.0 authentication, and SLO specification for Disney’s external partners to consume disney+ catalog data in scale and speed. </p>
+                <p>Create a quarterly OKR process to help team to set and track priorities and goals and score the key result(s), increasing the team’s focus and ownership and providing transparency to product managers and project managers
+                </p>
+                <p>Automate the DevOps process by integrating datadog infrastructure and log monitoring, pagerduty, slack, and confluence support knowledgebase </p>
+            </li>
+            <li>
+                <h3>JPMorgan Asset & Wealth Management - Portfolio Insight : April 2020 - Oct 2022</h3>
+                <h4>Executive Director, Senior Software Engineer Manager
+                </h4>
+                <p>Lead a global team of 20+ developers to re-architect and implement the fund of funds and single name equity stock portfolio insight application using Java, Python, and AWS service(s) such as EMR, EKS, dynamoDB, redis, kafka, step function, and event bridge, increasing the system to support unlimited scale while having a 40% cost reduction compared with the on premise infrastructure’s cost</p>
+                <p>Lead the cross teams development effort in integrating the model portfolios to portfolio insight for portfolio analysis, helping increase the JPM fund sales by 20% and improving the client service team efficiency with potential 4 head counts saving
+                </p>
+                <p>Create weekly toastmaster and regular hackathon and training sessions, improving team’s communication and innovation skills, and business and domain knowledge, and the annual employee satisfaction survey score from <50% to 90%
+                </p>
+                <p>Partner with product managers and business stakeholders to define the roadmap, OKR and review process, improving the transparency and helping all stakeholders to set and track the goals.
+                </p>
+            </li>
+            <li>
+                <H3>JPMorgan Asset & Wealth Management  - Portfolio Management and ETF System  : Dec 2014 - April 2020</h3>
+                <h4>Executive Director, Senior Software Engineer Manager</h4>
+                <p>Manage a multi year program to develop the ETF and fund of funds portfolio management application to view and rebalance the portfolio, order generation and management for equity and fixed income order flow
+                </p>
+                <p>Pioneer in adopting JPMorgan private cloud strategy.  Develop and manage all applications on the Pivotal private cloud platform with Java Spring Boot / React technology stack, and pilot new tools on AWS public cloud platform</p>
+                <p>Implement and adopt the test driven development and test automation in different levels for improved software quality : junit testing, jbehave acceptance and jmeter performance test, and cypress Web UI automation test
+                </p>
+            </li>
+        </ul>
+    </section>
 
-<h3>Movies</h3>
-<p>
-    Action and science fiction are my favors.
-</p>
+    <section id="projects" class="section" style="background-color: #f7f7f7;">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>Market Pro Using LangChain and OpenAI API</h3>
+                <p>Description: Develop a prototype to collect market strategist postings and use openAI and langchain to summarize and answer user's query on market and ecnomic outlook</p>
+                <p>Github : <a href="https://github.com/lrmillennium/marketstrategistchatbot">https://github.com/lrmillennium/marketstrategistchatbot</a></p>
+                <p>Video : <a href="http://tinyurl.com/ai5mintalk">AI 5 Minute Talk</a></p>
+            </li>
+            <li>
+                <h3>Ranking system using Yelp sample data, tensorflow, hugging face transform, and PipeCone Vector DB</h3>
+                <p>Description: Develop a prototype of ranking model using Yelp's sample data</p>
+                <p>Github : <a href="https://github.com/lrmillennium/businessrecommender">https://github.com/lrmillennium/businessrecommender</a></p>
+                <p>Video : <a href="http://tinyurl.com/ai5mintalk">AI 5 Minute Talk</a></p>
+            </li>
+            <li>
+                <h3>My GitHub</h3>
+                <p><a href="https://github.com/lrmillennium">https://github.com/lrmillennium</a></p>
+            </li>
+            <li>
+                <h3>My Youtube Channel</h3>
+                <p><a href="http://tinyurl.com/ai5mintalk">AI 5 Minute Talk</a></p>
+            </li>
+            <li>
+                <h3>My Udemy Courses</h3>
+                <p><a href="https://www.udemy.com/course/chatgpt-prompt-and-use-cases-demo/learn/lecture/37739688#overview">
+                    ChatGPT Prompt & Use Cases Demo
+                </a></p>
+                <p><a href="https://www.udemy.com/course/build-ranking-system-stock-market-pro-chatbot-using-aiml/learn/lecture/38665722#overview">
+                    Ranking system & chatbot with Langchain, LLM, Vector DB
+                </a></p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="certificates" class="section" style="background-color: #f5f5f5;">
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>Programming Languages :  Java, Python, Java Script
+            </li>
+            <li>AWS Stack : Kinesis, DynamoDB, EMR, EKS, Lambda, Elastic Search, Postgres DB</li>
+            <li>IaC : Terraform</li>
+            <li>DevOps : Jenkins, DataDog, Splunk
+            </li>
+            <li>AI/ML : TensorFlow, NumPy, Pandas, Langchain, PipeCone
+            </li>
+        </ul>
+        <h2>Certificates</h2>
+        <ul>
+            <li>Certified AWS Solution Architect Associate</li>
+            <li>DeepLearning.AI : Neural Networks, certified tensorFlow Developer</li>
+            <li>Financial Certificates : Series 7 and CFA Level I</li>
+        </ul>
+    </section>
+
+    <section id="hobbies" class="section" style="background-color: #f9f9f9;">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>American Football is my number one sport to watch. I run 5K(s), hike, and play soccer.</li>
+            <li>Exploring new places and experiencing different cultures is another passion of mine. I love to visit the national parks in U.S. and Canada.
+            </li>
+            <li>Action and science fiction movies are my favors.</li>
+        </ul>
+    </section>
+</div>
 </body>
 </html>
